@@ -226,3 +226,35 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
+/* Sidebar styling */
+[data-slot="sidebar-inner"],
+[data-sidebar="sidebar"],
+[data-slot="sidebar-wrapper"] {
+  background-color: var(--color-sidebar);
+  color: var(--color-sidebar-foreground);
+}
+
+/* Active nav item */
+[data-slot="sidebar"] .active {
+  background-color: var(--color-sidebar-primary);
+  color: var(--color-sidebar-primary-foreground);
+}
+
+/* Hover / accent nav item */
+[data-slot="sidebar"] .accent,
+[data-slot="sidebar"] .hover\:accent:hover {
+  background-color: var(--color-sidebar-accent);
+  color: var(--color-sidebar-accent-foreground);
+}
+
+/* Sidebar borders */
+[data-slot="sidebar"] {
+  border-color: var(--color-sidebar-border);
+}
+
+/* Focus ring */
+[data-slot="sidebar"] :focus {
+  outline: 2px solid var(--color-sidebar-ring);
+  outline-offset: 2px;
+}
